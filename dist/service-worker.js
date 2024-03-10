@@ -1,7 +1,6 @@
 var cacheName = "BookingSystem-v1";
 var cacheFiles = [
     "index.html",
-    // "lessons.js",
     "images/ArtClass Logo.jpg",
     "images/biology class.png",
     "images/bookingSystem.png",
@@ -14,7 +13,14 @@ var cacheFiles = [
     "images/MathClass Logo.jpg",
     "images/physicsClass.png",
     "images/ScienceClass Logo.jpg",
-    "images/shopping-cart.png"
+    "images/shopping-cart.png",
+    "src/assets/style.css",
+    "src/components/Checkout.vue",
+    "src/components/LessonsList.vue",
+    "src/app.vue",
+    "src/main.js",
+    "src/assets/logo.svg",
+    
 ];
 self.addEventListener("install", function(e) {
     console.log("[Service Worker] Install");
