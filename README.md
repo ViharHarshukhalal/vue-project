@@ -27,3 +27,5 @@ npm run dev
 ```sh
 npm run build
 ```
+Github  link: https://viharharshukhalal.github.io/vue-project/
+Repository: https://github.com/ViharHarshukhalal/vue-project
