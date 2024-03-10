@@ -1,7 +1,6 @@
 <template>
   <div class="checkout">
     <h2>Shopping Cart</h2>
-    <!-- <div v-if="cart.length > 0"> -->
       <button class="GoBackButton">← Back to Lessons</button>
       <div v-for="item in cart" :key="item.id" class="cart-item">
         <p>{{ item.subject }} - £{{ item.price }} ({{ item.quantity }})</p>
@@ -12,15 +11,11 @@
       </div>
       
       <h2>Checkout</h2>
-            <label>Name:</label>
+        <label>Name:</label>
         <input v-model="customerName" @input="validateName" type="text" placeholder="Enter your name"><br>
         <label>Phone Number:</label>
         <input v-model="phoneNumber" @input="validatePhone" type="tel" placeholder="Enter your phone number"><br>
         <button @click="checkout" :disabled="!isNameValid || !isPhoneValid" class="Checkout">Checkout</button>
-    <!-- </div> -->
-    <!-- <div v-else>
-      <p>Your cart is empty.</p>
-    </div> -->
   </div>
 </template>
 
@@ -46,12 +41,12 @@ export default {
       this.$emit('remove-item-from-cart', itemId);
     },
     validateName() {
-                    this.isNameValid = /^[A-Za-z]+$/.test(this.customerName);
-                },
+      this.isNameValid = /^[A-Za-z]+$/.test(this.customerName);
+    },
 
-                validatePhone() {
-                    this.isPhoneValid = /^[0-9]+$/.test(this.phoneNumber);
-                },
+    validatePhone() {
+      this.isPhoneValid = /^[0-9]+$/.test(this.phoneNumber);
+    },
     checkout() {
       const order = {
         customerName: this.customerName,
@@ -86,10 +81,3 @@ export default {
 }
 </script>
 
-<style>
-/* Existing styles */
-.checkout input {
-  display: block;
-  margin-top: 10px;
-}
-</style>

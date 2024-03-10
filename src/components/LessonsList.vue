@@ -25,37 +25,3 @@ export default {
   }
 }
 </script>
-<!-- 
-<style>
-.lessons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.lesson-card {
-  border: 1px solid #ddd;
-  margin: 10px;
-  padding: 20px;
-  width: calc(33.333% - 20px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.lesson-card h2 {
-  margin-top: 0;
-}
-.lesson-image {
-  max-width: 100%;
-  height: auto;
-}
-.addToCartButton, .soldOutButton {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-.soldOutButton {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-</style> -->

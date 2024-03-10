@@ -85,13 +85,11 @@ export default {
 			return `Show Cart (${this.cart.reduce((total, item) => total + item.quantity, 0)})`;
 		},
 		sortedAndFilteredLessons() {
-			// Filter lessons first based on the search query
 			let result = this.lessons.filter((lesson) => {
 				return lesson.subject.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
 					lesson.location.toLowerCase().includes(this.searchQuery.toLowerCase());
 			});
 
-			// Then sort the filtered results
 			result.sort((a, b) => {
 				if (this.sortOrder === 'asc') {
 					return a[this.sortAttribute] > b[this.sortAttribute] ? 1 : -1;
@@ -105,13 +103,11 @@ export default {
 	},
 	methods: {
 		toggleCartVisibility() {
-			// Check if the cart is not empty before toggling the visibility
 			if (this.cartItemCount() > 0) {
 				this.isCartVisible = !this.isCartVisible;
 			}
 		},
 		toggleView() {
-			// Check if the cart is not empty before toggling the view
 			if (this.cartItemCount() > 0) {
 				this.isCartVisible = !this.isCartVisible;
 			}
@@ -169,12 +165,11 @@ export default {
 			return this.cart.reduce((total, item) => total + item.quantity, 0);
 		},
 		performSearch() {
-			// This method is invoked on input but you may not need to explicitly handle search here
-			// if you're using the computed property for filtering. This method can be kept for future search enhancements.
+			
 		},
 		clearCart() {
 
-			this.cart = []; // Clears the cart
+			this.cart = [];
 		},
 
 	},
@@ -195,6 +190,3 @@ export default {
 };
 </script>
 
-<style>
-/* Your styles here */
-</style>
