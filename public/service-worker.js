@@ -20,7 +20,7 @@ var cacheFiles = [
     "src/app.vue",
     "src/main.js",
     "src/assets/logo.svg",
-    
+    "favicon.ico"
 ];
 self.addEventListener("install", function(e) {
     console.log("[Service Worker] Install");

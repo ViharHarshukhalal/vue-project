@@ -19,7 +19,8 @@
 
             <label>Search:</label>
             <input v-model="searchQuery" @input="performSearch" type="text" placeholder="Search lessons" class="SearchField">
-            <button class="ShowCart" @click="toggleCartVisibility" :disabled="cartItemCount() === 0">{{ cartButtonText }}</button>
+            <button class="ShowCart" @click="toggleCartVisibility" :disabled="cartItemCount() === 0">
+              <img src="images/cart-shopping-solid.svg" alt="Download Icon">{{ cartButtonText }}</button>
     </div>
     <div v-if="testConsole && showTestConsole">
       <strong class="test-elem">HTTPS Test: </strong>
